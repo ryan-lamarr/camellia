@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",                     // 基础目录，所有相对路径都基于此目录
+      "target": "ESNext",                     // 设置编译后的 JavaScript 版本
+      "module": "ESNext",                     // 使用 ESM 模块
+      "moduleResolution": "node",             // 模块解析方式，使用 Node.js 的解析规则
+      "strict": true,                         // 启用严格类型检查
+      "esModuleInterop": true,                // 启用 ES 模块兼容 CommonJS 的特性
+      "skipLibCheck": true,                   // 跳过库文件检查，提升性能
+      "forceConsistentCasingInFileNames": true, // 强制文件名一致性
+      "types": ["node", "glob"],               // 包括 node 和 glob 的类型声明
+      "typeRoots": [
+        "./node_modules/@types"                // 指定类型声明文件的根目录
+      ],
+      "paths": {
+        "@core/*": ["core/*"], // 设置 `@` 映射到 `src` 文件夹
+        "@cli/*": ["cli/*"], // 设置 `@` 映射到 `src` 文件夹
+        "@camellia/types": ["types/index.d.ts"]   // 👈 映射你的 types 目录
+      },
+    },
+    "include": [
+      "core/**/*.ts",
+      "cli/**/*.ts",
+      "types/index.d.ts"                           // 需要编译的文件
+    ],
+    "exclude": [
+      "node_modules"                          // 排除的文件
+    ]
+  }
+  

@@ -1,0 +1,18 @@
+{ "name": "camellia",
+  "version": "1.0.0",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "tsx cli/index.ts build"
+  },
+  "dependencies": {
+    "glob": "^11.0.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "^22.14.1",
+    "@types/yargs": "^17.0.33",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
